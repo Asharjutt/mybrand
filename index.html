@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your E-commerce Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header and Navbar -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="logo">Logo</div>
+            <div class="menu" id="menu">
+                <a href="#customized-product" class="hover-line">Customized Product</a>
+                <a href="#customer-support" class="hover-line">Customer Support</a>
+                <a href="#contact-us" class="hover-line">Contact Us</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <div class="carousel-container">
+        <div class="carousel-slide" id="carouselSlide">
+          <img src="image1.jpg" alt="Image 1" class="carousel-image">
+          <img src="image2.jpg" alt="Image 2" class="carousel-image">
+          <img src="image3.jpg" alt="Image 3" class="carousel-image">
+        </div>
+      </div>
+
+
+
+
+
+      <div class="product-section">
+        <h2>NEW ARRIVAL</h2><br><br>
+        <div class="product-cards">
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product1.jpg" alt="Product 1" class="product-image">
+            <div class="product-info">
+              <h3>Product 1</h3>
+              <p>Short description of product 1.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product2.jpg" alt="Product 2" class="product-image">
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <p>Short description of product 2.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product3.jpg" alt="Product 3" class="product-image">
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <p>Short description of product 3.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product4.jpg" alt="Product 4" class="product-image">
+            <div class="product-info">
+              <h3>Product 4</h3>
+              <p>Short description of product 4.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section">
+        <h2>OUR PRODUCT</h2><br><br>
+        <div class="product-cards">
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product1.jpg" alt="Product 1" class="product-image">
+            <div class="product-info">
+              <h3>Product 1</h3>
+              <p>Short description of product 1.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product2.jpg" alt="Product 2" class="product-image">
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <p>Short description of product 2.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product3.jpg" alt="Product 3" class="product-image">
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <p>Short description of product 3.</p>
+            </div>
+          </div>
+          <div class="product-card" onclick="location.href='description.html';">
+            <img src="product4.jpg" alt="Product 4" class="product-image">
+            <div class="product-info">
+              <h3>Product 4</h3>
+              <p>Short description of product 4.</p>
+            </div>
+          </div>
+         
+          
+        </div>
+      </div>
+
+
+
+      <div class="discount-offer-section">
+        <h2>Discount Offer</h2><br>
+        <div class="discount-offer-card" onclick="location.href='description.html';">
+          <img src="discount-offer.jpg" alt="Discount Offer" class="discount-image">
+          <div class="discount-info">
+            <h3>50% Off on Selected Items!</h3>
+            <p>Limited time offer. Grab your favorite products at half price!</p>
+            <span class="discount-badge">Limited Time Only</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="daily-update-section">
+        <h2>Subscribe for Daily Updates!</h2>
+        <p>Stay informed with the latest news and exclusive offers. Enter your email to subscribe:</p>
+        <div class="subscribe-container">
+          <input type="email" placeholder="Enter your email" class="email-input" required>
+          <button class="subscribe-button">
+            <i class='bx bx-paper-plane'></i> Subscribe
+          </button>
+        </div>
+      </div>
+
+      
+
+
+      <footer class="footer-section">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Brand Logo" class="brand-logo">
+          </div>
+          <div class="footer-address">
+            <p>123 Main Street, Anytown, USA</p>
+          </div>
+          <div class="footer-links">
+            <a href="#" class="footer-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-linkedin'></i></a>
+          </div>
+        </div>
+        <div class="footer-rights">
+          <p>© 2024 Your Brand. All Rights Reserved.</p>
+        </div>
+      </footer>
+      
+      
+      <script>
+        //script of toggle
+
+        const menu = document.getElementById('menu');
+        const hamburger = document.getElementById('hamburger');
+
+        function toggleMenu() {
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+      </script>
+
+      <script>
+        
+  const slide = document.getElementById('carouselSlide');
+  const images = document.querySelectorAll('.carousel-image');
+  let index = 0;
+
+  function startCarousel() {
+    index++;
+    if (index >= images.length) {
+      index = 0;
+    }
+    slide.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  // Set the interval to 3 seconds
+  setInterval(startCarousel, 3000);
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="script" href="script.js">
+</body>
+</html>

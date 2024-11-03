@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Raleway', sans-serif;
+  }
+  
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #e0dbdb;
+  color: rgb(0, 0, 0);
+  z-index: 10;
+  padding: 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Desktop Menu */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover Underline Animation */
+.hover-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5b0f02;
+  transition: width 0.4s ease-in-out;
+}
+
+.hover-line:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger span {
+  background-color: rgb(0, 0, 0);
+  height: 2px;
+  width: 25px;
+  margin: 5px 0;
+  transition: all 0.6s ease;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 480px) {
+  .menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 60%;
+    background-color: #e0dbdb;
+    flex-direction: column;
+    text-transform:initial;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 3s ease-in-out;
+  }
+
+  .menu.open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Transform Hamburger into Close Icon */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Carousel Container */
+ .carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top:80px ;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Slides */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Carousel Image */
+.carousel-image {
+  min-width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Carousel Buttons (optional, if you want manual control) */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px; /* Adjust height as necessary */
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.product-info h3 {
+  margin: 5px 0;
+}
+
+.product-info p {
+  color: #555;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(50% - 10px); /* Two cards per row, accounting for gap */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.discount-offer-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  margin-top: 20px; /* Space above the section */
+}
+
+.discount-offer-card {
+  width: 300px; /* Card width */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.discount-offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.discount-image {
+  width: 100%;
+  height: 200px; /* Adjust height as necessary */
+  object-fit: cover;
+}
+
+.discount-info {
+  padding: 10px;
+}
+
+.discount-info h3 {
+  margin: 5px 0;
+  color: #5b0f02; /* Red color for emphasis */
+}
+
+.discount-info p {
+  color: #555;
+}
+
+.discount-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #5b0f02;/* Red background for the badge */
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.daily-update-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1; /* Light background for contrast */
+  margin-top: 20px; /* Space above the section */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.email-input {
+  padding: 10px;
+  width: 250px; /* Width of the email input */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px; /* Space between input and button */
+}
+
+.subscribe-button {
+  padding: 10px 15px;
+  background-color: #5b0f02; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Center icon vertically */
+}
+
+.subscribe-button i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.subscribe-button:hover {
+  background-color: #5b0f02; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer-section {
+  background-color:#e0dbdb; /* Dark background for contrast */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+  margin-bottom: 10px; /* Space between content and rights */
+}
+
+.footer-logo {
+  margin-bottom: 10px; /* Space below the logo */
+}
+
+.brand-logo {
+  width: 100px; /* Adjust logo size as needed */
+}
+
+.footer-address {
+  margin: 10px 0; /* Space above and below the address */
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  margin: 10px 0; /* Space above and below the links */
+}
+
+.footer-icon {
+  color: rgb(0, 0, 0); /* Icon color */
+  font-size: 24px; /* Size of the icons */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.footer-icon:hover {
+  color:#5b0f02; /* Change color on hover */
+}
+
+.footer-rights {
+  border-top: 1px solid #3b0000; /* Top border for separation */
+  padding-top: 10px; /* Space above the rights text */
+}
